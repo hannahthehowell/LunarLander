@@ -1,0 +1,247 @@
+body {
+    background-image: url("Images/background.png");
+}
+
+
+/* /////////////// MENU PAGE /////////////// */
+
+.header {
+    font-size: 40px;
+    background-color: honeydew;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    width:fit-content;
+    height:fit-content;
+    margin: 0 auto;
+}
+
+.landerButton {
+    background-color: dimgrey;
+    border-radius: 15px;
+    color: honeydew;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.landerButton:hover {
+    background-color: cornflowerblue;
+    border-radius: 15px;
+}
+
+
+#highScoreOption {
+    float: right;
+    margin: 0px;
+}
+
+#controlsOption {
+    float: left;
+    margin: 0px;
+}
+
+#creditsOption {
+    margin: 0 auto;
+}
+
+#credits {
+    font-size: 40px;
+    color: white;
+    background-color: rebeccapurple;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 15px 32px;
+    margin: 20px;
+    text-align: center;
+    width:fit-content;
+    height:fit-content;
+    margin: 0 auto;
+}
+
+#buttonSelect {
+    text-align: center;
+    margin: 20px;
+}
+
+#shipPics {
+    text-align: center;
+    margin: 20px;
+}
+
+.ship {
+    padding: 5px;
+}
+
+.ship:hover {
+    background-color: honeydew;
+    border-radius: 15px;
+}
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio] + img {
+    cursor: pointer;
+}
+
+[type=radio]:checked + img {
+    border-radius: 15px;
+    background-color: cornflowerblue;
+    border: 1px solid white;
+}
+
+#clickForMusic {
+    font-size: 20px;
+    background-color: honeydew;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    width:fit-content;
+    height:fit-content;
+    margin: 0 auto;
+}
+
+
+/* /////////////// CONTROLS PAGE /////////////// */
+
+#controls-page {
+    display: none;
+}
+
+.label {
+    font-size: 40px;
+    background-color: honeydew;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    width:fit-content;
+    height:fit-content;
+}
+
+#backToMenu0 {
+    float: left;
+    margin: 0px;
+}
+
+.newControl {
+    width: 150px;
+    height: 50px;
+    font-size: 40px;
+}
+
+
+/* /////////////// HIGH SCORE PAGE /////////////// */
+
+#highScore-page {
+    display: none;
+}
+
+#backToMenu1 {
+    float: left;
+    margin: 0px;
+}
+
+.score {
+    font-size: 40px;
+    background-color: honeydew;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    width:fit-content;
+    height:fit-content;
+}
+
+
+/* /////////////// CREDITS PAGE /////////////// */
+
+#credits-page {
+    display: none;
+}
+
+#backToMenu2 {
+    float: left;
+    margin: 0px;
+}
+
+
+/* /////////////// LUNAR LANDER PAGE /////////////// */
+
+#lunarLander-page {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#canvasBox {
+    width: 1024px;
+    height: 512px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#inGame-scoreBox {
+    width: 256px;
+    height: 512px;
+    border: 1px solid black;
+    padding: 5px;
+    float: right;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+canvas {
+    background-color: transparent;
+}
+
+#backToMenu3 {
+    background-color: black;
+    float: left;
+    margin: 0px;
+    width: 140px;
+}
+
+.currentScore {
+    font-size: 40px;
+}
+
+#secondsRemaining, #secondsElapsed, #currScore, #answer {
+    text-align: center;
+    margin: 28px;
+}
+
+
+/* /////////////// ENTER SCORE PAGE /////////////// */
+
+#enterHighScore-page {
+    display: none;
+    text-align: center;
+}
+
+#initials {
+    width: 100px;
+    height: 50px;
+    font-size: 40px;
+}
+
+
+

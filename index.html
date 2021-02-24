@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+    <meta charset = "UTF-8">
+    <title>Lunar Lander</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="scripts/input.js"></script>
+    <script src="scripts/random.js"></script>
+    <script src="scripts/particle-system.js"></script>
+    <script src = "scripts/gameplay.js"></script>
+</head>
+
+<body onclick="playGameMusic()" onclick="getControls()">
+
+<!--Menu Page-->
+    <div id="menu-page">
+
+        <button type="button" id="controlsOption" class="landerButton" onclick="viewControls()">Settings</button>
+        <button type="button" id="highScoreOption" class="landerButton" onclick="viewHighScores()">High Scores</button>
+
+        <div id="characterSelectBox">
+            <div class="header" style="margin-top: 40px;">
+                Choose your Ship
+            </div>
+
+            <div id="shipPics">
+                <label>
+                    <input type="radio" name="shipSelect" checked id="redRocket" >
+                    <img class="ship" src="Images/redRocket.png" style = "height:175px">
+                </label>
+                <label>
+                    <input type="radio" name="shipSelect" id="blueRocket">
+                    <img class="ship" src="Images/blueRocket.png" style = "height:175px">
+                </label>
+                <label>
+                    <input type="radio" name="shipSelect" id="yellowRocket">
+                    <img class="ship" src="Images/yellowRocket.png" style = "height:175px">
+                </label>
+            </div>
+        </div>
+
+        <div class="header">
+            BEWARE! You're about to enter orbit on a very dangerous planet
+        </div>
+        <div id="buttonSelect">
+            <button type="button" id="start" class="landerButton" onclick="start1()">Ready?</button>
+        </div>
+
+        <button type="button" id="creditsOption" class="landerButton" onclick="viewCredits()">View Credits</button>
+
+        <div id="clickForMusic">Click Anywhere to Play Music</div>
+    </div>
+
+<!--Controls Page-->
+    <div id="controls-page">
+        <button type="button" id="backToMenu0" class="landerButton" onclick="goBackToMenu()">Menu</button>
+        <div class="header" style="margin-top: 40px;">
+            Controls
+        </div>
+        <div id="controlList" style="text-align: center;">
+            <div class="label" style="display: inline-block">Thrust</div>
+            <button id="thrustDisplay" type="button" class=landerButton onclick="changeThrust()" style="display: inline-block"></button>
+            <input id="newThrustControl" class="newControl" maxlength="10" style="display:none">
+            <button id="enterNewThrustControl" type="button" class="landerButton" onclick="setThrust()" style="display:none">Change</button>
+            <br>
+            <div class="label" style="display: inline-block">Rotate Left</div>
+            <button id="rotateLeftDisplay" type="button" class=landerButton onclick="changeRotateLeft()" style="display: inline-block"></button>
+            <input id="newRotateLeftControl" class="newControl" maxlength="10" style="display:none">
+            <button id="enterNewRotateLeftControl" type="button" class="landerButton" onclick="setRotateLeft()" style="display:none">Change</button>
+            <br>
+            <div class="label" style="display: inline-block">Rotate Right</div>
+            <button id="rotateRightDisplay" type="button" class=landerButton onclick="changeRotateRight()" style="display: inline-block"></button>
+            <input id="newRotateRightControl" class="newControl" maxlength="10" style="display:none">
+            <button id="enterNewRotateRightControl" type="button" class="landerButton" onclick="setRotateRight()" style="display:none">Change</button>
+        </div>
+    </div>
+
+<!--High Score Page-->
+    <div id="highScore-page">
+        <button type="button" id="backToMenu1" class="landerButton" onclick="goBackToMenu()">Menu</button>
+        <div class="header" style="margin-top: 40px;">
+            High Scores
+        </div>
+        <div id="highScoreReport"></div>
+    </div>
+
+<!--Credits Page-->
+    <div id="credits-page">
+        <button type="button" id="backToMenu2" class="landerButton" onclick="goBackToMenu()">Menu</button>
+        <div id="credits" style="margin-top: 40px;">
+            Made by Hannah Howell
+        </div>
+    </div>
+
+<!--GamePlay Page-->
+    <div id="lunarLander-page">
+        <button type="button" id="backToMenu3" class="landerButton" onclick="goBackToMenu1()">Go Back to the Menu</button>
+
+        <div id="canvasBox">
+            <canvas id = "canvas-background" width = "1024" height = "600" style = "width: 1024px; height: 600px; position: absolute; z-index: 1"></canvas>
+            <canvas id = "canvas-foreground" width = "1024" height = "600" style = "width: 1024px; height: 600px; position:absolute; z-index: 2"></canvas>
+        </div>
+    </div>
+
+<!--Enter High Score Page-->
+    <div id="enterHighScore-page">
+        <div class="header" style="margin-top: 40px;">
+            New High Score!
+        </div>
+        <div id="runReport">
+            <div id="finalScore"></div>
+        </div>
+        <div class="header">
+            Please Enter Your Initials
+        </div>
+        <form style="margin: 20px">
+            <input id="initials" maxlength="3" placeholder="STV">
+            <br>
+            <input type="button" class=landerButton onclick="addHighScore()" value="Enter">
+        </form>
+    </div>
+
+</body>
+</html>
